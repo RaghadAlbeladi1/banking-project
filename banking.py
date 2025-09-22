@@ -74,3 +74,10 @@ class BankAccount:
                 self.row["active"] = False
 
         return self.balance
+class CheckingAccount(BankAccount):
+    def __init__(self, row: dict):
+        super().__init__(row, "checking")
+
+class SavingsAccount(BankAccount):
+    def __init__(self, row: dict):
+        super().__init__(row, "savings")
