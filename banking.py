@@ -27,9 +27,9 @@ class Customer:
         print(f"Overdraft Count: {self.overdraft_count}")
 
 
-from typing import Optional, Dict, Any
+from typing import Dict
 class BankAccount:
-    def __init__(self, customer_record: Dict[str, Any], account_type: str):
+    def __init__(self, customer_record: Dict, account_type: str):
         self.customer_record = customer_record
         self.account_type = account_type  
 
@@ -140,6 +140,31 @@ class Transaction:
         self.customers = self.load_customers()
         self.current_customer = None
         self.show_main_menu()
+
+    def choose_account(self, customer, action_label: str = ""):
+        label = f" {action_label}" if action_label else ""
+        print(f"\nChoose account{label}:")
+        options = []
+        if customer.get("has_checking", False):
+            options.append(("1", "Checking"))
+        if customer.get("has_savings", False):
+            options.append(("2", "Savings"))
+
+        if not options:
+            print("You have no open accounts. Please open an account first.")
+            return None
+
+        for code, name in options:
+            print(f"{code}) {name}")
+
+        choice = input("> ").strip()
+        if choice == "1" and customer.get("has_checking", False):
+            return CheckingAccount(customer)
+        if choice == "2" and customer.get("has_savings", False):
+            return SavingsAccount(customer)
+
+        print("Invalid choice.")
+        return None
 
     def load_customers(self):
         customers = []
@@ -271,7 +296,7 @@ class Transaction:
                 print("Invalid choice")
 
     def deposit(self):
-        account = self._choose_account(self.current_customer, " ")
+        account = self.choose_account(self.current_customer)
         if account is None:
             return
         try:
@@ -284,7 +309,7 @@ class Transaction:
 
 
     def withdraw(self):
-        account = self._choose_account(self.current_customer, " ")
+        account = self.choose_account(self.current_customer, "withdraw")
         if account is None:
             return
         try:
@@ -305,7 +330,7 @@ class Transaction:
 
         if t == "1":
             print("\nFrom which account?")
-            from_acc = self._choose_account(self.current_customer, "transfer from")
+            from_acc = self.choose_account(self.current_customer, "transfer from")
             if from_acc is None:
                 return
 
@@ -326,8 +351,8 @@ class Transaction:
                 print("Invalid amount.")
                 return
 
-        if from_acc.transfer(amount, to_acc):
-            self.save_customers()
+            if from_acc.transfer(amount, to_acc):
+                self.save_customers()
 
         elif t == "2":
             try:
@@ -345,7 +370,7 @@ class Transaction:
                 return
 
             print("\nFrom which account?")
-            from_acc = self._choose_account(self.current_customer, "transfer from")
+            from_acc = self.choose_account(self.current_customer, "transfer from")
             if from_acc is None:
                 return
 
@@ -386,10 +411,10 @@ class Transaction:
 
 
 class CheckingAccount(BankAccount):
-    def __init__(self, customer_record: Dict[str, Any]):
+    def __init__(self, customer_record: Dict):
         super().__init__(customer_record, "checking")
 class SavingsAccount(BankAccount):
-    def __init__(self, customer_record: Dict[str, Any]):
+    def __init__(self, customer_record: Dict):
         super().__init__(customer_record, "savings")
 
 if __name__ == "__main__":
