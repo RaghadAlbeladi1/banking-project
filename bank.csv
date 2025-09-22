@@ -19,3 +19,4 @@ id,first_name,last_name,password,checking,savings,active,overdraft_count,has_che
 100018,ro,ro,1231,0,,true,0,true,false
 100019,sultan,alharbi,123123,0,,true,0,true,false
 100020,t,t,123,198,,true,0,true,false
+100021,Abdullah,Aldafas,123,0,300,true,0,true,true
