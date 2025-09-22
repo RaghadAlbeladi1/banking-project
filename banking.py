@@ -54,7 +54,7 @@ class BankingApp:
             elif choice in ("2","c","create","signup"):
                 self.signup()
             elif choice in ("q","quit"):
-                print("💜 Bye!")
+                print("💜 thank u!")
                 break
             else:
                 print("Invalid choice.")
