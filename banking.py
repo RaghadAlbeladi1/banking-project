@@ -52,7 +52,7 @@ class BankAccount:
             self.row["active"] = True
         return self.balance
 
-    def withdraw(self, amount: int) -> int:
+    def withdraw(self, amount: int) :
 
         if not self._is_active():
             raise BalanceError("Account is deactivated. Please deposit to reactivate.")
