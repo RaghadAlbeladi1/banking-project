@@ -81,3 +81,20 @@ class CheckingAccount(BankAccount):
 class SavingsAccount(BankAccount):
     def __init__(self, row: dict):
         super().__init__(row, "savings")
+
+class InterestAccount(BankAccount):  
+    def __init__(self, row: dict, kind="savings", interest=0.03):
+        super().__init__(row, kind)
+        self.interest = float(interest)
+    def deposit(self, amount: int):
+        super().deposit(amount)
+        self.balance = int(self.balance * (1 + self.interest))
+        return self.balance
+
+class ChargingAccount(BankAccount): 
+    def __init__(self, row: dict, kind="checking", fee=3):
+        super().__init__(row, kind)
+        self.extra_fee = int(fee)
+    def withdraw(self, amount: int):
+        return super().withdraw(amount + self.extra_fee)
+
