@@ -47,17 +47,21 @@ class BankingApp:
 
     def entry_menu(self):
         while True:
-            print("\n Raghad Bank —  Menu")
-            choice = input("Do you want to (1) login, (2) create account, or (q) quit? ").strip().lower()
-            if choice in ("1","l","login"):
+            print("\n🏦 Raghad Bank — Menu")
+            print("1) Login")
+            print("2) Create account")
+            print("q) Quit")
+            choice = input("> ").strip().lower()
+
+            if choice in {"1","l","login"}:
                 self.login()
-            elif choice in ("2","c","create","signup"):
+            elif choice in {"2","c","create","signup"}:
                 self.signup()
-            elif choice in ("q","quit"):
-                print("💜 thank u!")
+            elif choice in {"q","quit"}:
+                print("💜 Thank you!")
                 break
             else:
-                print("Invalid choice.")
+                print("Invalid choice")
 
     def signup(self):
         print("\n Create New Customer")
@@ -65,13 +69,14 @@ class BankingApp:
         last  = input("Last name : ").strip()
         while True:
             pw = input("Password (6+ chars): ").strip()
-            if len(pw) >= 6: break
-            print("Too short.")
+            if len(pw) >= 6:
+                break
+            print("Too short")
 
         print("Open which account(s)?\n 1) Checking only\n 2) Savings only\n 3) Both")
         opt = input("Choose 1/2/3: ").strip()
-        has_checking = opt in ("1","3")
-        has_savings  = opt in ("2","3")
+        has_checking = opt in {"1","3"}
+        has_savings  = opt in {"2","3"}
 
         new_id = max((r["id"] for r in self.customers), default=10000) + 1
         new_row = {
@@ -90,17 +95,20 @@ class BankingApp:
         try:
             cid = int(input("Account ID: ").strip())
         except ValueError:
-            print("Invalid ID."); return
-        idx = next((i for i,r in enumerate(self.customers) if r["id"] == cid), None)
+            print("Invalid ID.")
+            return
+        idx = next((i for i, r in enumerate(self.customers) if r["id"] == cid), None)
         if idx is None:
-            print("No such account."); return
+            print(" No such account.")
+            return
         pw = input("Password: ").strip()
         if pw != self.customers[idx]["password"]:
-            print("Wrong password."); return
+            print(" Wrong password.")
+            return
         self.current_index = idx
         u = self.customers[idx]
         print(f"Welcome {u['first_name']} {u['last_name']}! (ID {u['id']})")
-
+        
 if __name__ == "__main__":
-    app = BankingApp()   
-    app.entry_menu()     
+    app = BankingApp()
+    app.entry_menu()
