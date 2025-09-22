@@ -1,100 +1,50 @@
-import csv
-import os
-
-
+import csv, os
 print("🏦 💸 Welcome To Raghad Bank  💸🏦")
+
 FIELDNAMES = [
-    "id",
-    "first_name",
-    "last_name",
-    "password",
-    "checking",
-    "savings",
-    "active",
-    "overdraft_count",
+    "id","first_name","last_name","password",
+    "checking","savings","active","overdraft_count",
+    "has_checking","has_savings"           
 ]
 
-class BalanceError(Exception):
-    pass
+class BankingApp:
+    def __init__(self, csv_file="bank.csv"):
+        self.csv_file = csv_file
+        self._ensure_csv()
+        self.customers = self._load_customers()
+        self.current_index = None
+        print(f"Loaded {len(self.customers)} customers.")
 
-class AuthError(Exception):
-    pass
+    def _ensure_csv(self):
+        if not os.path.exists(self.csv_file):
+            with open(self.csv_file, "w", newline="") as f:
+                csv.DictWriter(f, fieldnames=FIELDNAMES).writeheader()
 
-class BankAccount:
-    OVERDRAFT_FEE = 35
-    MAX_WITHDRAW = 100
-    MIN_ALLOWED_BALANCE = -100 
-    OVERDRAFT_DISABLE_AFTER = 2 
+    def _load_customers(self):
+        items = []
+        with open(self.csv_file, "r", newline="") as f:
+            for row in csv.DictReader(f):
+                row["id"] = int(row["id"])
+                row["checking"] = int(row["checking"])
+                row["savings"] = int(row["savings"])
+                row["active"] = str(row["active"]).lower() == "true"
+                row["overdraft_count"] = int(row["overdraft_count"])
+                row["has_checking"] = str(row.get("has_checking","true")).lower() == "true"
+                row["has_savings"]  = str(row.get("has_savings","true")).lower()  == "true"
+                items.append(row)
+        return items
 
-    def __init__(self, row: dict, kind: str):
-        self.row = row
-        self.kind = kind
+    def _save_customers(self):
+        with open(self.csv_file, "w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=FIELDNAMES)
+            w.writeheader()
+            for r in self.customers:
+                out = r.copy()
+                out["active"]       = "true" if r["active"] else "false"
+                out["has_checking"] = "true" if r.get("has_checking", True) else "false"
+                out["has_savings"]  = "true" if r.get("has_savings",  True) else "false"
+                w.writerow(out)
 
-    @property
-    def balance(self):
-        return int(self.row[self.kind])
-
-    @balance.setter
-    def balance(self, val: int):
-        self.row[self.kind] = int(val)
-
-    def _is_active(self):
-        return bool(self.row["active"])
-
-    def _total_balance(self):
-        return int(self.row["checking"]) + int(self.row["savings"])
-
-    def deposit(self, amount: int):
-        if amount <= 0:
-            raise ValueError("Deposit amount must be > 0.")
-        self.balance = self.balance + amount
-        if self._total_balance() >= 0:
-            self.row["active"] = True
-        return self.balance
-
-    def withdraw(self, amount: int) :
-
-        if not self._is_active():
-            raise BalanceError("Account is deactivated. Please deposit to reactivate.")
-
-        if amount <= 0 or amount > self.MAX_WITHDRAW:
-            raise BalanceError("Cannot withdraw more than $100 in one transaction (and must be > 0).")
-
-        projected = self.balance - amount
-        fee = self.OVERDRAFT_FEE if projected < 0 else 0
-
-        if projected - fee < self.MIN_ALLOWED_BALANCE:
-            raise BalanceError("Resulting balance cannot go below -$100.")
-
-        self.balance = projected - fee
-
-        if fee > 0:
-            self.row["overdraft_count"] += 1
-            if self.row["overdraft_count"] >= self.OVERDRAFT_DISABLE_AFTER:
-                self.row["active"] = False
-
-        return self.balance
-class CheckingAccount(BankAccount):
-    def __init__(self, row: dict):
-        super().__init__(row, "checking")
-
-class SavingsAccount(BankAccount):
-    def __init__(self, row: dict):
-        super().__init__(row, "savings")
-
-class InterestAccount(BankAccount):  
-    def __init__(self, row: dict, kind="savings", interest=0.03):
-        super().__init__(row, kind)
-        self.interest = float(interest)
-    def deposit(self, amount: int):
-        super().deposit(amount)
-        self.balance = int(self.balance * (1 + self.interest))
-        return self.balance
-
-class ChargingAccount(BankAccount): 
-    def __init__(self, row: dict, kind="checking", fee=3):
-        super().__init__(row, kind)
-        self.extra_fee = int(fee)
-    def withdraw(self, amount: int):
-        return super().withdraw(amount + self.extra_fee)
-
+    def entry_menu(self):
+        print("\n=== Main ===")
+        choice = input("Do you want to (1)login, (2)create account, or (q)quit? ").s
