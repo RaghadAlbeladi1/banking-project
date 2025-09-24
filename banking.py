@@ -83,7 +83,7 @@ class BankAccount:
         return True
 
     def withdraw(self, amount: int):
-        # Block withdraw if account/customer is inactive
+        # Block withdraw if account/customer is inactive  (Cynthia)
         if not self.customer_record.get("active", True):
             print("Account is not active.")
             return False
@@ -122,7 +122,7 @@ class BankAccount:
         return True
 
     def transfer(self, amount: int, destination_account: "BankAccount"):
-        # Block transfer if either source or destination is inactive
+        # Block transfer if either source or destination is inactive    (Cynthia)
         if not self.customer_record.get("active", True):
             print("Source account is not active.")
             return False
@@ -364,7 +364,7 @@ class Transaction:
                     except:
                         print("Invalid amount.")
                         continue
-                    #Todo: check if the amount is enough to the account be on 0 or more
+                    #Todo: check if the amount is enough to the account be on 0 or more (Cynthia)
                     if acc == "checking":
                         old_balance = cust["checking"] if cust["checking"] is not None else 0
                     else:
