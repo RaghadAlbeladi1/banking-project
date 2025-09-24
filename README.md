@@ -5,6 +5,35 @@
 ![Interface](https://img.shields.io/badge/Interface-CLI-green)
 ![Status](https://img.shields.io/badge/Project-Banking_App-purple)
 
+## How to Run
+- Requirements: Python 3.10+ 
+- Run:
+  - python3 banking.py
+
+## Technologies Used
+- Python
+- csv file
+- Githob
+- Visual studio
+
+## App Files
+
+
+## Functionality Map (Requirements → Code)
+
+
+## Classes
+
+
+## Challenges / Key Takeaways
+
+## Icebox Features
+
+
+
+
+# Raghad Bank
+
 Simple, menu-driven banking app using Python and CSV storage. Supports new account creation, login/logout, deposit, withdraw, and transfers with overdraft protection.
 
 ## Demo (GIF)
@@ -16,6 +45,9 @@ Placeholders:
 ![Welcome](assets/welcome.gif)
 
 ![App Demo](assets/demo.gif)
+Add a short screen recording here showing: login → deposit → withdraw → internal transfer → external transfer.
+
+Example placeholder: assets/demo.gif
 
 ## Quick Start
 
@@ -47,7 +79,8 @@ Which account(s) to open?
 3) Both
 > 3
 Account created! Your ID: 10001
-
+```
+```
 🏦💸 Welcome To Raghad Bank 💸🏦
 1) Login
 2) Create Account
@@ -57,7 +90,8 @@ Account created! Your ID: 10001
 Customer ID: 10001
 Password: ****
 Welcome Raghad A.!
-
+```
+```
  Raghad Bank-- Menu 
 1) Deposit
 2) Withdraw
@@ -71,7 +105,6 @@ Choose account:
 > 1
 Amount?: $200
 Deposited $200. Balance: $0 -> $200
-
 > 2
 Choose account withdraw:
 1) Checking
@@ -79,7 +112,8 @@ Choose account withdraw:
 > 1
  amount?: $50
 Withdrew $50. Balance: $200 -> $150
-
+```
+```
 > 3
 Transfer type:
 1) Between my accounts (Checking ⇄ Savings)
@@ -154,30 +188,10 @@ Type handling:
 
 ## Icebox Features
 
-- ➜ Transaction History Log
-  - Format -> CSV or JSON per customer
-  - What to store -> timestamp, action (deposit/withdraw/transfer), account_type, amount, balances before/after, notes
-  - Where -> `transactions.csv` or `transactions/` folder per user
-  - How to integrate -> append on every successful operation in `BankAccount.deposit/withdraw/transfer`
-
-- ➜ View Full History
-  - Menu option -> “View My Transaction History” under customer menu
-  - Behavior -> read and pretty-print all rows for `current_customer`
-  - Filters -> optional date range / action type
-
-- ➜ Inspect Single Transaction
-  - Menu option -> “View Transaction by ID”
-  - Behavior -> search by transaction_id and print extra details (pre/post balances, destination account, fees applied)
-
-- ➜ Automated Tests
-  - Framework -> pytest
-  - Scope -> test at least 3 requirements: overdraft fee, max $100 per withdrawal, internal transfer correctness
-  - Command -> `pytest -q`
-
-- ➜ Enhanced CLI UX
-  - Input validation -> centralized `read_amount()` and yes/no prompts
-  - Styling -> colored output (optional), clearer prompts, consistent error messages
-  - Typewriter-style welcome (optional) -> animated text at startup
+- Transaction history log (CSV or JSON)
+- View full history and inspect a single transaction
+- Automated tests (pytest) for withdraw/deposit/transfer
+- Enhanced CLI styling and input validation
 
 ## Screenshots / GIFs
 
