@@ -16,12 +16,13 @@
 - Githob
 - Visual studio
 
-## App Files
--bank.csv
--banking.py
+## App Files 
+## Project Structure
+-bank.csv: data file (auto-created with headers on first run)
+-banking.py : application code
 -project_requirements.md
 -project_standups.md
--README.md
+-README.md: you are here
 
 
 ## Functionality Map (Requirements → Code)
@@ -38,7 +39,6 @@
 
 
 # Raghad Bank
-
 Simple, menu-driven banking app using Python and CSV storage. Supports new account creation, login/logout, deposit, withdraw, and transfers with overdraft protection.
 
 ## Quick Start
@@ -190,7 +190,3 @@ Type handling:
 - View full history and inspect a single transaction
 - Automated tests (pytest) for withdraw/deposit/transfer
 - Enhanced CLI styling and input validation
-
-## Screenshots / GIFs
-
-Place your GIFs and screenshots under `assets/` and reference them above.
