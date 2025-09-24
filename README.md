@@ -24,7 +24,7 @@ Simple, menu-driven banking app using Python and CSV storage. Supports new accou
 - Run:
   - ```bash
     python3 banking.py
-$ python3 banking.py
+ 
 🏦💸 Welcome To Raghad Bank 💸🏦
 1) Login
 2) Create Account
@@ -50,13 +50,14 @@ Customer ID: 10001
 Password: ****
 Welcome Raghad Albeladi!
 ```
-```
+
  Raghad Bank-- Menu 
 1) Deposit
 2) Withdraw
 3) Transfer
 4) Show Info
 5) Logout
+```
 > 1
 Choose account:
 1) Checking
@@ -72,13 +73,14 @@ Choose account withdraw:
  amount?: $50
 Withdrew $50. Balance: $200 -> $150
 ```
-```
+
  Raghad Bank-- Menu 
 1) Deposit
 2) Withdraw
 3) Transfer
 4) Show Info
 5) Logout
+```
 > 3
 Transfer type:
 1) Between my accounts (Checking ⇄ Savings)
