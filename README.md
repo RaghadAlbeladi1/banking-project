@@ -1,48 +1,31 @@
 # Raghad Bank
-
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Data](https://img.shields.io/badge/Data-CSV-lightgrey)
-![Interface](https://img.shields.io/badge/Interface-CLI-green)
-![Status](https://img.shields.io/badge/Project-Banking_System-purple)
-
-## How to Run
-- Requirements: Python 3.10+ 
-- Run:
-  - python3 banking.py
-
-## Technologies Used
-- Python
-- csv file
-- Githob
-- Visual studio
+Simple, menu-driven banking app using Python and CSV storage. Supports new account creation, login/logout, deposit, withdraw, and transfers with overdraft protection.
 
 ## App Files 
 ## Project Structure
 -bank.csv: data file (auto-created with headers on first run)
--banking.py : application code
+
+-banking.py: application code
 -project_requirements.md
 -project_standups.md
 -README.md: you are here
 
-
-## Functionality Map (Requirements → Code)
-
-
 ## Classes
+- `Customer`: pretty print account info
+- `BankAccount`: deposit, withdraw, transfer logic (shared)
+- `CheckingAccount` / `SavingsAccount`: thin wrappers setting `account_type`
+- `Transaction`: menus, login flow, CSV I/O (`ensure_csv_exists`, `load_customers`, `save_customers`, optional `view_csv`)
 
-
-## Challenges / Key Takeaways
-
-## Icebox Features
-
-
-
-
-# Raghad Bank
-Simple, menu-driven banking app using Python and CSV storage. Supports new account creation, login/logout, deposit, withdraw, and transfers with overdraft protection.
+## How to Run
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Data](https://img.shields.io/badge/Data-CSV-lightgrey)
+![Interface](https://img.shields.io/badge/Interface-CLI-green)
+![Status](https://img.shields.io/badge/Project-Banking_System-purple)
+- Requirements: Python 3.10+ 
+- Run:
+  - python3 banking.py
 
 ## Quick Start
-
 Prerequisites:
 - Python 3.10+
 
@@ -128,14 +111,22 @@ Deposited $100. Balance: $0 -> $100
 Transfer completed successfully.
 ```
 
-## Project Structure
 
-- banking.py: application code
-- bank.csv: data file (auto-created with headers on first run)
-- README.md: you are here
+
+## Functionality Map (Requirements → Code)
+
+
+
+
+## Challenges / Key Takeaways
+
+## Icebox Features
+
+
+
+
 
 ## Features (Requirements → Implementation)
-
 - Add New Customer: `Transaction.create_account`
 - Login / Logout: `Transaction.login`, `Transaction.customer_menu`
 - Checking / Savings / Both: `Transaction.create_account` (`has_checking`, `has_savings`)
@@ -164,12 +155,6 @@ Type handling:
 - Booleans: `active`, `has_checking`, `has_savings` (stored as "true"/"false")
 - Empty balances stored as empty string in CSV; loaded as `None` in memory.
 
-## Classes
-
-- `Customer`: pretty print account info
-- `BankAccount`: deposit, withdraw, transfer logic (shared)
-- `CheckingAccount` / `SavingsAccount`: thin wrappers setting `account_type`
-- `Transaction`: menus, login flow, CSV I/O (`ensure_csv_exists`, `load_customers`, `save_customers`, optional `view_csv`)
 
 ## How It Works (CLI Flow)
 
@@ -190,3 +175,9 @@ Type handling:
 - View full history and inspect a single transaction
 - Automated tests (pytest) for withdraw/deposit/transfer
 - Enhanced CLI styling and input validation
+
+## Technologies Used
+- Python
+- csv file
+- Githob
+- Visual studio
