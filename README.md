@@ -21,18 +21,9 @@ Simple, menu-driven banking app using Python and CSV storage. Supports new accou
 ![Data](https://img.shields.io/badge/Data-CSV-lightgrey)
 ![Interface](https://img.shields.io/badge/Interface-CLI-green)
 ![Status](https://img.shields.io/badge/Project-Banking_System-purple)
-- Requirements: Python 3.10+ 
 - Run:
-  - python3 banking.py
-
-## Quick Start
-Prerequisites:
-- Python 3.10+
-
-Run the app:
-
-```bash
-python3 banking.py
+  - ```bash
+    python3 banking.py
 ```
 
 Example session:
