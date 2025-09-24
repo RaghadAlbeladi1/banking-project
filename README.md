@@ -36,19 +36,6 @@
 
 Simple, menu-driven banking app using Python and CSV storage. Supports new account creation, login/logout, deposit, withdraw, and transfers with overdraft protection.
 
-## Demo (GIF)
-- App Walkthrough: add a short screen recording showing login → deposit → withdraw → internal transfer → external transfer.
-- Animated Welcome: you can add an animated "Welcome to Raghad Bank" GIF.
-
-Placeholders:
-
-![Welcome](assets/welcome.gif)
-
-![App Demo](assets/demo.gif)
-Add a short screen recording here showing: login → deposit → withdraw → internal transfer → external transfer.
-
-Example placeholder: assets/demo.gif
-
 ## Quick Start
 
 Prerequisites:
