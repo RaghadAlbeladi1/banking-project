@@ -47,7 +47,7 @@ class BankAccount:
 
     def open_account(self):
         if self.is_account_open():
-            print("This account type is already opened.")
+            print("This account is already opened.")
             return False
 
         self.customer_record[self.balance_key()] = 0
@@ -128,7 +128,7 @@ class BankAccount:
 
         was_deposited = destination_account.deposit(amount)
         if not was_deposited:
-            print("Transfer failed on deposit stage.")
+            print("Transfer failed")
             return False
 
         print("Transfer completed successfully.")
@@ -137,9 +137,25 @@ class BankAccount:
 class Transaction:
     def __init__(self, csv_file="bank.csv"):
         self.csv_file = csv_file
+        self.ensure_csv_exists()
         self.customers = self.load_customers()
         self.current_customer = None
         self.show_main_menu()
+
+    def ensure_csv_exists(self):
+        if not os.path.exists(self.csv_file):
+            with open(self.csv_file, "w", newline="") as f:
+                writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
+                writer.writeheader()
+
+    def view_csv(self):
+        try:
+            with open(self.csv_file, "r", newline="") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    print(row)
+        except csv.Error as e:
+            print(e)
 
     def choose_account(self, customer, action_label: str = ""):
         label = f" {action_label}" if action_label else ""
