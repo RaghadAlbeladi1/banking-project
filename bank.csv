@@ -30,3 +30,6 @@ id,first_name,last_name,password,checking,savings,active,overdraft_count,has_che
 100029,y,y,1,0,0,true,2,true,true
 100030,b,b,b,0,0,true,2,true,true
 100031,l,l,l,0,0,true,2,true,true
+100032,i,i,i,0,0,true,0,true,true
+100033,y,y,y,0,0,true,2,true,true
+100034,k,k,k,0,0,true,0,true,true

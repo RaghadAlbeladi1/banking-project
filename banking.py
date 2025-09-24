@@ -277,7 +277,7 @@ class Transaction:
 
         self.customers.append(new_customer)
         self.db.save_customers(self.customers)
-        print(f"Account created! Your ID: {new_id}")
+        print(f"Account created! Your ID: {new_id}\U0001F970")
 
     def login(self):
         print("\n Login")
@@ -389,7 +389,7 @@ class Transaction:
                 elif resp in ("n", "no"):
                     break
                 else:
-                    print("Please answer Y or N.")
+                    print("Please answer Y or N \U0001F970")
 
         if cust.get("active", True):
             print("💜 Thank you for using Raghad Bank!💜-> your account has been reactivated")
@@ -428,7 +428,7 @@ class Transaction:
         t = input("> ").strip()
 
         if t == "1":
-            print("\nFrom which account?")
+            print("\nFrom which account?\U0001F970")
             from_acc = self.choose_account(self.current_customer, "transfer from")
             if from_acc is None:
                 return
@@ -468,7 +468,7 @@ class Transaction:
                 print("Recipient account is not active.")
                 return
 
-            print("\nFrom which account?")
+            print("\nFrom which account?\U0001F970")
             from_acc = self.choose_account(self.current_customer, "transfer from")
             if from_acc is None:
                 return
