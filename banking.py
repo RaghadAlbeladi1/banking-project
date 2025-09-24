@@ -83,7 +83,10 @@ class BankAccount:
         return True
 
     def withdraw(self, amount: int):
-        #Todo: check if account active
+        # Block withdraw if account/customer is inactive
+        if not self.customer_record.get("active", True):
+            print("Account is not active.")
+            return False
         if not self.is_account_open():
             print("Open this account first before withdrawing.")
             return False
@@ -119,7 +122,13 @@ class BankAccount:
         return True
 
     def transfer(self, amount: int, destination_account: "BankAccount"):
-        #Todo: check if the account is
+        # Block transfer if either source or destination is inactive
+        if not self.customer_record.get("active", True):
+            print("Source account is not active.")
+            return False
+        if not destination_account.customer_record.get("active", True):
+            print("Destination account is not active.")
+            return False
         print(f"Starting transfer of ${amount} from {self.account_type} to {destination_account.account_type}...")
         was_withdrawn = self.withdraw(amount)
         if not was_withdrawn:
@@ -288,6 +297,12 @@ class Transaction:
 
     def customer_menu(self):
         while True:
+            if self.current_customer and not self.current_customer.get("active", True):
+                self.reactivation_assistance()
+                if self.current_customer and not self.current_customer.get("active", True):
+                    print("Your account is not active. Logging out.")
+                    self.current_customer = None
+                    break
             print("\n Raghad Bank-- Menu ")
             print("1) Deposit")
             print("2) Withdraw")
@@ -310,6 +325,60 @@ class Transaction:
                 break
             else:
                 print("Invalid choice")
+                continue
+            
+
+    def reactivation_assistance(self):
+        cust = self.current_customer
+        if not cust:
+            return
+        first = cust.get("first_name", "")
+        last = cust.get("last_name", "")
+        overdrafts = cust.get("overdraft_count", 0)
+
+        account_needs = []
+        if cust.get("has_checking", False):
+            bal = cust.get("checking", 0) or 0
+            if bal < 0:
+                account_needs.append(("checking", -bal))
+        if cust.get("has_savings", False):
+            bal = cust.get("savings", 0) or 0
+            if bal < 0:
+                account_needs.append(("savings", -bal))
+
+        print(f"Hi {first} {last} - your account has overdrafted {overdrafts} times - you will need to deposit the amounts below to reactivate..")
+        if account_needs:
+            for acc, need in account_needs:
+                print(f"please insert ${need} of money into your {acc}")
+        else:
+            print("Your balances are non-negative. A small deposit will reactivate your account.")
+
+        for acc, need in account_needs:
+            while True:
+                resp = input(f"Deposit now into {acc}? (Y/N) ").strip().lower()
+                if resp in ("y", "yes"):
+                    try:
+                        default_str = str(need)
+                        amt_str = input(f"Amount to deposit into {acc} [default {default_str}]: ").strip()
+                        amount = int(amt_str) if amt_str else int(need)
+                    except:
+                        print("Invalid amount.")
+                        continue
+                    #Todo: check if the amount is enough to the account be on 0 or more
+                    target = CheckingAccount(cust) if acc == "checking" else SavingsAccount(cust)
+                    if target.deposit(amount):
+                        self.save_customers()
+                        if cust.get("active", True):
+                            print("thank you -> your account has been reactivated")
+                            return
+                    break
+                elif resp in ("n", "no"):
+                    break
+                else:
+                    print("Please answer Y or N.")
+
+        if cust.get("active", True):
+            print("thank you -> your account has been reactivated")
 
     def deposit(self):
         account = self.choose_account(self.current_customer)

@@ -24,3 +24,5 @@ id,first_name,last_name,password,checking,savings,active,overdraft_count,has_che
 100023,Cynthia,Castillo,Abc123,-60,0,true,1,true,true
 100024,RC,rc,123,-95,0,false,2,true,true
 100025,rt,rt,123,-95,0,false,2,true,true
+100026,cc,ccc,123,,0,true,0,false,true
+100027,w,w,123,-18,0,false,2,true,true
