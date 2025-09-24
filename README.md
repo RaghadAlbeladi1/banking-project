@@ -22,9 +22,9 @@ Simple, menu-driven banking app using Python and CSV storage. Supports new accou
 ![Interface](https://img.shields.io/badge/Interface-CLI-green)
 ![Status](https://img.shields.io/badge/Project-Banking_System-purple)
 - Run:
-  - ```bash
+ ```bash
     python3 banking.py
- 
+```
 🏦💸 Welcome To Raghad Bank 💸🏦
 1) Login
 2) Create Account
