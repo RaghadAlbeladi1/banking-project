@@ -27,3 +27,5 @@ id,first_name,last_name,password,checking,savings,active,overdraft_count,has_che
 100026,cc,ccc,123,,0,true,0,false,true
 100027,w,w,123,-18,0,false,2,true,true
 100028,finally,finally,yay!,0,0,true,2,true,true
+100029,y,y,1,0,0,true,2,true,true
+100030,b,b,b,0,0,true,2,true,true

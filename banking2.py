@@ -383,7 +383,7 @@ class Transaction:
                     if target.deposit(amount):
                         self.db.save_customers(self.customers)
                         if cust.get("active", True):
-                            print("thank you -> your account has been reactivated")
+                            print("💜 Thank you for using Raghad Bank!💜-> your account has been reactivated")
                             return
                     break
                 elif resp in ("n", "no"):
@@ -392,7 +392,7 @@ class Transaction:
                     print("Please answer Y or N.")
 
         if cust.get("active", True):
-            print("thank you -> your account has been reactivated")
+            print("💜 Thank you for using Raghad Bank!💜-> your account has been reactivated")
 
     def deposit(self):
         account = self.choose_account(self.current_customer)
