@@ -309,12 +309,12 @@ class Transaction:
                     print("Your account is not active. Logging out.")
                     self.current_customer = None
                     break
-            print("\n Raghad Bank-- Menu ")
-            print("1) Deposit")
-            print("2) Withdraw")
-            print("3) Transfer")
-            print("4) Show Info")
-            print("5) Logout")
+            print("\n ✨ Raghad Bank -- Menu ✨ ")
+            print("1)➕ Deposit")
+            print("2)➖ Withdraw")
+            print("3)🔁 Transfer")
+            print("4)📋 Show Info")
+            print("5)❌ Logout")
             choice = input("> ")
 
             if choice == "1":
@@ -422,7 +422,7 @@ class Transaction:
 
 
     def transfer(self):
-        print("\nTransfer type:")
+        print("\n 🔁 Transfer type:")
         print("1) Between my accounts (Checking ⇄ Savings)")
         print("2) To another customer")
         t = input("> ").strip()
