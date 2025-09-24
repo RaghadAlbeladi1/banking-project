@@ -365,6 +365,14 @@ class Transaction:
                         print("Invalid amount.")
                         continue
                     #Todo: check if the amount is enough to the account be on 0 or more
+                    if acc == "checking":
+                        old_balance = cust["checking"] if cust["checking"] is not None else 0
+                    else:
+                        old_balance = cust["savings"] if cust["savings"] is not None else 0
+
+                    if old_balance + amount < 0:
+                        print(f"Amount not sufficient. You need at least ${need} to reactivate this account.")
+                        continue
                     target = CheckingAccount(cust) if acc == "checking" else SavingsAccount(cust)
                     if target.deposit(amount):
                         self.save_customers()
