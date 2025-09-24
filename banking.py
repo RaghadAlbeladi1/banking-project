@@ -98,14 +98,14 @@ class BankAccount:
         current_balance = self.get_balance()
         tentative_balance = current_balance - int(amount)
 
-        if tentative_balance < -100:
+        if tentative_balance < -65:
             print("Withdrawal denied: resulting balance would be less than -$100.")
             return False
 
         new_balance = tentative_balance
 
-        crossed_from_non_negative_to_negative = (current_balance >= 0) and (new_balance < 0)
-        if crossed_from_non_negative_to_negative:
+        # Apply overdraft fee whenever resulting balance is negative
+        if new_balance < 0:                
             new_balance -= 35
             current_overdrafts = int(self.customer_record.get("overdraft_count", 0)) + 1
             self.customer_record["overdraft_count"] = current_overdrafts

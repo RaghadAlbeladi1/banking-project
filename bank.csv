@@ -20,3 +20,5 @@ id,first_name,last_name,password,checking,savings,active,overdraft_count,has_che
 100019,sultan,alharbi,123123,0,,true,0,true,false
 100020,t,t,123,198,,true,0,true,false
 100021,Abdullah,Aldafas,123,0,300,true,0,true,true
+100022,rb,rb,123,-135,0,true,1,true,true
+100023,Cynthia,Castillo,Abc123,-60,0,true,1,true,true
