@@ -1,9 +1,9 @@
 # Raghad Bank
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Data](https://img.shields.io/badge/Storage-CSV-lightgrey)
+![Data](https://img.shields.io/badge/Data-CSV-lightgrey)
 ![Interface](https://img.shields.io/badge/Interface-CLI-green)
-![Status](https://img.shields.io/badge/Project-Banking_App-purple)
+![Status](https://img.shields.io/badge/Project-Banking_System-purple)
 
 ## How to Run
 - Requirements: Python 3.10+ 
@@ -17,6 +17,11 @@
 - Visual studio
 
 ## App Files
+-bank.csv
+-banking.py
+-project_requirements.md
+-project_standups.md
+-README.md
 
 
 ## Functionality Map (Requirements → Code)
@@ -101,6 +106,12 @@ Choose account withdraw:
 Withdrew $50. Balance: $200 -> $150
 ```
 ```
+ Raghad Bank-- Menu 
+1) Deposit
+2) Withdraw
+3) Transfer
+4) Show Info
+5) Logout
 > 3
 Transfer type:
 1) Between my accounts (Checking ⇄ Savings)
