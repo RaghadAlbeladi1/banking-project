@@ -83,6 +83,7 @@ class BankAccount:
         return True
 
     def withdraw(self, amount: int):
+        #Todo: check if account active
         if not self.is_account_open():
             print("Open this account first before withdrawing.")
             return False
@@ -104,8 +105,7 @@ class BankAccount:
 
         new_balance = tentative_balance
 
-        # Apply overdraft fee whenever resulting balance is negative
-        if new_balance < 0:                
+        if new_balance < 0:
             new_balance -= 35
             current_overdrafts = int(self.customer_record.get("overdraft_count", 0)) + 1
             self.customer_record["overdraft_count"] = current_overdrafts
@@ -113,13 +113,13 @@ class BankAccount:
 
             if current_overdrafts >= 2:
                 self.customer_record["active"] = False
-                print("Account deactivated due to multiple overdrafts.")
-
+                print(" deactivated due to multiple overdrafts.")
         self.set_balance(new_balance)
         print(f"Withdrew ${amount}. Balance: ${current_balance} -> ${new_balance}")
         return True
 
     def transfer(self, amount: int, destination_account: "BankAccount"):
+        #Todo: check if the account is
         print(f"Starting transfer of ${amount} from {self.account_type} to {destination_account.account_type}...")
         was_withdrawn = self.withdraw(amount)
         if not was_withdrawn:
