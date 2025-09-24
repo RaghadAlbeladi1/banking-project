@@ -24,38 +24,31 @@ Simple, menu-driven banking app using Python and CSV storage. Supports new accou
 - Run:
   - ```bash
     python3 banking.py
-```
-
-Example session:
-
-```bash
 $ python3 banking.py
 🏦💸 Welcome To Raghad Bank 💸🏦
 1) Login
 2) Create Account
 3) Quit
+```
 > 2
  Create New Account
 First name: Raghad
-Last name: A.
+Last name: Albeladi
 Password: ****
-Which account(s) to open?
+Which account(S) to open?
 1) Checking only
 2) Savings only
 3) Both
 > 3
 Account created! Your ID: 10001
 ```
+
 ```
-🏦💸 Welcome To Raghad Bank 💸🏦
-1) Login
-2) Create Account
-3) Quit
 > 1
  Login
 Customer ID: 10001
 Password: ****
-Welcome Raghad A.!
+Welcome Raghad Albeladi!
 ```
 ```
  Raghad Bank-- Menu 
