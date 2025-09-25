@@ -15,14 +15,19 @@ Welcome to <b>Raghad Bank</b> — a CLI-based banking app where you can open acc
 
 ---
 
-## Project Structure 
- Raghad-Bank
+<h2 align="left"> Project Structure</h2>
+<p align="left">
+
+```
+Raghad-Bank/
 ├──  bank.csv        → Data file (auto-created on first run)  
 ├──  banking.py      → Main application code  
 └──  README.md       → Project documentation  
+```
 
+</p>
 
-<h2 align="center">Features (User Stories → Implementation)</h2>
+<h2 align="left"> Features (User Stories → Implementation)</h2>
 
 <p align="center">
 
@@ -38,6 +43,7 @@ Welcome to <b>Raghad Bank</b> — a CLI-based banking app where you can open acc
 | 8️⃣ | Pretty print account info | `Customer.display` |
 
 </p>
+
 ---
 
 ## How to Run
@@ -75,9 +81,9 @@ id, first_name, last_name, password, checking, savings, active, overdraft_count,
 - **Booleans** → stored as "true"/"false"
 - **Empty balances** → stored as empty string, loaded as None in memory
 
-##  Example Walkthrough
+## Example Walkthrough
 
-### Create New Account
+###  Create New Account
 ```
 > 2
  Create New Account
@@ -214,7 +220,7 @@ Logged out
 💜 Thank you for using Raghad Bank! 💜
 ```
 
-## Challenges & Key Takeaways
+##  Challenges & Key Takeaways
 
 - ✅ Handling overdrafts & automatic deactivation/reactivation rules
 - ✅ Converting CSV text into proper **types** (int, bool, None)
@@ -222,33 +228,37 @@ Logged out
 - ✅ Designing a menu-driven CLI that feels smooth & user-friendly
 - ✅ Learned how important **data persistence** is (CSV as a mini-database)
 
-## Icebox Features (Future Ideas)
+##  Icebox Features (Future Ideas)
 
-- Transaction history log (CSV/JSON)
-- View past transactions with filtering
-- Unit tests (pytest) for deposit/withdraw/transfer
-- Enhanced CLI styling (colors, ASCII art banners)
-- Forgot password & reset flow
+-  Transaction history log (CSV/JSON)
+-  View past transactions with filtering
+-  Unit tests (pytest) for deposit/withdraw/transfer
+-  Enhanced CLI styling (colors, ASCII art banners)
+-  Forgot password & reset flow
+  
+##  Technologies Used 
+ <p align="left" style="display: flex; justify-content: space-between;"> <img src="https://raw.githubusercontent.com/RaghadAlbeladi1/banking-project/main/python_csv.png" width="60" alt="Python + CSV"/> <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" width="60" alt="Python"/> <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/visual_studio_code.png" width="60" alt="VS Code"/> <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" width="60" alt="GitHub"/> </p>
 
-## 🛠️ Technologies Used  
+##  Education & Training
 
-<p align="center" style="display: flex; justify-content: space-between;">
-  <img src="https://raw.githubusercontent.com/RaghadAlbeladi1/banking-project/main/python_csv.png" width="60" alt="Python + CSV"/>
-  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" width="60" alt="Python"/>
-  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/visual_studio_code.png" width="60" alt="VS Code"/>
-  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" width="60" alt="GitHub"/>
-</p>
+This project was developed as part of my learning journey with:
 
+<div align="center">
 
-## 🎓 Education & Training      (#fix)
+| **General Assembly** | **Saudi Digital Academy** |
+|:---:|:---:|
+| <img src="https://logos-world.net/wp-content/uploads/2022/01/General-Assembly-Logo.png" alt="General Assembly" width="180" style="background: transparent;"/> | <img src="https://media.licdn.com/dms/image/C4D0BAQGQbDrjIgTpOw/company-logo_200_200/0/1656417148866/saudi_digital_academy_logo?e=2147483647&v=beta&t=K8QJw4VCu8iw3LBEKq5Y-8hUHnV8DfMzC6BtPdtD9xI" alt="Saudi Digital Academy" width="180" style="background: transparent;"/> |
 
+*Empowering the next generation of digital talent* 
+
+</div>
 
 ## System Requirements
 
 - Python 3.10 or higher
 - No additional dependencies required
 
-## Notes
+##  Notes
 
 - Account IDs are automatically generated starting from 10001
 - The system supports both checking and savings accounts
@@ -256,13 +266,13 @@ Logged out
 - Secure password authentication for account access
 - Overdraft protection with $35 fee and account deactivation after 2 overdrafts
 
-## Fun Ending
+
+
+<h2 align="center">🎉 Fun Ending</h2>
+<div align="center">
 
 Thank you for visiting **Raghad Bank**! 💜  
 Every deposit counts, every withdrawal teaches discipline — but don't worry, here overdrafts are just Python learning opportunities 😉  
-
 ![funny gif](https://media4.giphy.com/media/GeimqsH0TLDt4tScGw/200w.webp)
 
----
-
-**Made with 💜 by Raghad Albeladi**
+</div>
