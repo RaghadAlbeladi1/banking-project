@@ -10,3 +10,22 @@ Welcome to **Raghad Bank** — a CLI-based banking app where you can open accoun
 - bank.csv      -> Data file (auto-created on first run)  
 - banking.py    -> Main application code  
 - README.md     -> Project documentation 
+
+
+## ✨ Features (User Stories → Implementation)
+| #  | User Story | Where in Code? |
+|----|-------------|----------------|
+| 1️⃣ | Create new account (checking/savings/both) | `Transaction.create_account` |
+| 2️⃣ | Login / Logout | `Transaction.login` & `Transaction.customer_menu` |
+| 3️⃣ | Deposit | `Transaction.deposit` → `BankAccount.deposit` |
+| 4️⃣ | Withdraw (with overdraft rules) | `Transaction.withdraw` → `BankAccount.withdraw` |
+| 5️⃣ | Transfers (between my accounts or to other customers) | `Transaction.transfer` |
+| 6️⃣ | Overdraft protection ($35 fee, deactivate after 2 overdrafts) | `BankAccount.withdraw` |
+| 7️⃣ | Reactivation after deposit | `BankAccount.deposit` + `Transaction.reactivation_assistance` |
+| 8️⃣ | Pretty print account info | `Customer.display` |
+
+---
+
+##  How to Run
+   ```bash
+   python3 --version
