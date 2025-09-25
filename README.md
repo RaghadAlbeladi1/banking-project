@@ -1,8 +1,10 @@
 <h1 align="center">🏦💸 Raghad Bank 💸🏦</h1>  
 <p align="center"><i>A simple yet fun Banking System built with Python & CSV</i></p>  
 
-<p align="center">
-  Welcome to <b>Raghad Bank</b> — a simple banking system built in Python that runs in the terminal. It allows users to create accounts, log in with ID and password, deposit, withdraw, and transfer money, handle overdrafts and inactive accounts, and save/load data from a CSV file. The project demonstrates <b>Object-Oriented Programming (OOP)</b>, <b>file handling</b>, and <b>CLI-based interaction</b>.
+<p align="center"> 
+Welcome to <b>Raghad Bank!</b> — a simple banking system built in Python that runs in the terminal.  
+  It lets users <b>create accounts</b>, <b>log in</b>, <b>deposit</b>, <b>withdraw</b>, and <b>transfer money</b>, while also handling <b>overdrafts</b> and <b>inactive accounts</b>.  
+  Data is stored in a <b>CSV file</b>, and the project demonstrates key concepts like <b>Object-Oriented Programming (OOP)</b>, <b>file handling</b>, and <b>CLI-based interaction</b>.
 </p>
 
 
