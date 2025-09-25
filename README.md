@@ -17,6 +17,23 @@
   <img src="https://img.shields.io/badge/Editor-VS%20Code-blue?logo=visualstudiocode"/>
 </p>  
 
+## Education & Training  
+
+This project was developed as part of my learning journey with:
+
+<p align="center">
+  <a href="https://generalassemb.ly/">
+    <img src="https://raw.githubusercontent.com/RaghadAlbeladi1/banking-project/main/ga.png" alt="General Assembly" height="80"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://sda.edu.sa/">
+    <img src="https://raw.githubusercontent.com/RaghadAlbeladi1/banking-project/main/sda.png" alt="Saudi Digital Academy" height="80"/>
+  </a>
+</p>
+
+<p align="center"><i>✨ Empowering the next generation of digital talent ✨</i></p>
+
+
 ---
 
 <h2 align="left"> Project Structure</h2>
@@ -242,20 +259,6 @@ Logged out
   
 ##  Technologies Used 
  <p align="left" style="display: flex; justify-content: space-between;"> <img src="https://raw.githubusercontent.com/RaghadAlbeladi1/banking-project/main/python_csv.png" width="60" alt="Python + CSV"/> <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" width="60" alt="Python"/> <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/visual_studio_code.png" width="60" alt="VS Code"/> <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" width="60" alt="GitHub"/> </p>
-
-##  Education & Training
-
-This project was developed as part of my learning journey with:
-
-<div align="center">
-
-| **General Assembly** | **Saudi Digital Academy** |
-|:---:|:---:|
-| <img src="https://logos-world.net/wp-content/uploads/2022/01/General-Assembly-Logo.png" alt="General Assembly" width="180" style="background: transparent;"/> | <img src="https://media.licdn.com/dms/image/C4D0BAQGQbDrjIgTpOw/company-logo_200_200/0/1656417148866/saudi_digital_academy_logo?e=2147483647&v=beta&t=K8QJw4VCu8iw3LBEKq5Y-8hUHnV8DfMzC6BtPdtD9xI" alt="Saudi Digital Academy" width="180" style="background: transparent;"/> |
-
-*Empowering the next generation of digital talent* 
-
-</div>
 
 ## System Requirements
 
