@@ -15,7 +15,7 @@ Welcome to **Raghad Bank** — a CLI-based banking app where you can open accoun
 └──  README.md       → Project documentation  
 ```
 
-## ✨ Features (User Stories → Implementation)
+## Features (User Stories → Implementation)
 
 | #  | User Story | Where in Code? |
 |----|-------------|----------------|
