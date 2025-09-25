@@ -12,17 +12,19 @@ Welcome to <b>Raghad Bank</b> — a CLI-based banking app where you can open acc
   <img src="https://img.shields.io/badge/Hosted_on-GitHub-black?logo=github"/>
   <img src="https://img.shields.io/badge/Editor-VS%20Code-blue?logo=visualstudiocode"/>
 </p>  
+
 ---
 
-## Project Structure
-```
- Raghad-Bank/
+## Project Structure 
+ Raghad-Bank
 ├──  bank.csv        → Data file (auto-created on first run)  
 ├──  banking.py      → Main application code  
 └──  README.md       → Project documentation  
-```
 
-## Features (User Stories → Implementation)
+
+<h2 align="center">Features (User Stories → Implementation)</h2>
+
+<p align="center">
 
 | #  | User Story | Where in Code? |
 |----|-------------|----------------|
@@ -35,6 +37,7 @@ Welcome to <b>Raghad Bank</b> — a CLI-based banking app where you can open acc
 | 7️⃣ | Reactivation after deposit | `BankAccount.deposit` + `Transaction.reactivation_assistance` |
 | 8️⃣ | Pretty print account info | `Customer.display` |
 
+</p>
 ---
 
 ## How to Run
