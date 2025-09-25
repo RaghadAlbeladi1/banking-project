@@ -53,7 +53,7 @@ Upon running, you'll see the main menu:
 3) Quit
 ```
 
-## Data Model
+##  Data Model
 
 Each row in `bank.csv` = one customer record:
 ```csv
@@ -65,7 +65,7 @@ id, first_name, last_name, password, checking, savings, active, overdraft_count,
 - **Booleans** → stored as "true"/"false"
 - **Empty balances** → stored as empty string, loaded as None in memory
 
-## Example Walkthrough
+##  Example Walkthrough
 
 ### Create New Account
 ```
@@ -82,7 +82,7 @@ Which account(s) to open?
 Account created! Your ID: 10001 🥰
 ```
 
-### Login
+###  Login
 ```
 > 1
  Login
@@ -91,7 +91,7 @@ Password: ****
 Welcome Raghad Albeladi!
 ```
 
-### Customer Menu
+###  Customer Menu
 After successful login, you'll access the customer menu:
 ```
 ✨ Raghad Bank -- Menu ✨
@@ -102,7 +102,7 @@ After successful login, you'll access the customer menu:
 5)❌ Logout
 ```
 
-### Deposit Example
+###  Deposit Example
 ```
 > 1
 Choose account:
@@ -113,7 +113,7 @@ Amount?: $200
 Deposited $200. Balance: $0 -> $200
 ```
 
-### Withdraw Example
+###  Withdraw Example
 ```
 > 2
 Choose account withdraw:
@@ -124,7 +124,50 @@ Choose account withdraw:
 Withdrew $50. Balance: $200 -> $150
 ```
 
-### Transfer Example
+###  Overdraft Example
+When you try to withdraw more than your balance:
+```
+> 2
+Choose account withdraw:
+1) Checking
+2) Savings
+> 1
+ amount?: $200
+Insufficient funds. $35 overdraft fee applied.
+Withdrew $200. Balance: $150 -> $-85
+Overdraft count: 1
+```
+
+After 2 overdrafts, your account gets deactivated:
+```
+> 2
+Choose account withdraw:
+1) Checking
+2) Savings
+> 1
+ amount?: $100
+Insufficient funds. $35 overdraft fee applied.
+Withdrew $100. Balance: $-85 -> $-220
+Overdraft count: 2
+⚠️  Account deactivated due to 2 overdrafts!
+```
+
+###  Account Reactivation
+When your account is deactivated, you need to deposit enough to reach $0:
+```
+> 1
+Choose account:
+1) Checking (INACTIVE - Balance: $-220)
+2) Savings
+> 1
+Current balance: $-220
+Minimum deposit needed to reactivate: $220
+Amount?: $250
+Deposited $250. Balance: $-220 -> $30
+🎉 Account reactivated! Welcome back!
+```
+
+###  Transfer Example
 #### Between Your Own Accounts
 ```
 > 3
@@ -143,7 +186,7 @@ Deposited $100. Balance: $0 -> $100
 Transfer completed successfully.
 ```
 
-### Show Account Information
+###  Show Account Information
 ```
 > 4
 
@@ -154,7 +197,7 @@ Active: True
 Overdraft Count: 0
 ```
 
-### ❌ Logout
+###  Logout
 ```
 > 5
 Logged out
@@ -177,7 +220,7 @@ Logged out
 - Enhanced CLI styling (colors, ASCII art banners)
 - Forgot password & reset flow
 
-## Technologies Used
+## Technologies Used        (#fix)
 
 - 🐍 Python 3.10+
 - 📑 CSV for data persistence
@@ -185,7 +228,7 @@ Logged out
 - 🛠️ Visual Studio Code
 - 🌐 GitHub for version control
 
-## 🎓 Education & Training
+## 🎓 Education & Training      (#fix)
 
 This project was developed as part of my learning journey with:
 
@@ -214,7 +257,7 @@ This project was developed as part of my learning journey with:
 - Secure password authentication for account access
 - Overdraft protection with $35 fee and account deactivation after 2 overdrafts
 
-## 🎉 Fun Ending
+## Fun Ending
 
 Thank you for visiting **Raghad Bank**! 💜  
 Every deposit counts, every withdrawal teaches discipline — but don't worry, here overdrafts are just Python learning opportunities 😉  
@@ -224,4 +267,3 @@ Every deposit counts, every withdrawal teaches discipline — but don't worry, h
 ---
 
 **Made with 💜 by Raghad Albeladi**
-
