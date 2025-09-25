@@ -19,13 +19,16 @@
 
 This project was developed as part of my learning journey with:
 
-<p align="center">
+<p align="center">![Uploading download (2).svg…]()
+
   <a href="https://generalassemb.ly/">
     <img src="https://raw.githubusercontent.com/RaghadAlbeladi1/banking-project/main/ga.png" alt="General Assembly" height="80"/>
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://sda.edu.sa/">
-    <img src="https://raw.githubusercontent.com/RaghadAlbeladi1/banking-project/main/sda.png" alt="Saudi Digital Academy" height="80"/>
+    <!-- <img src="" alt="Saudi Digital Academy" height="80" -->
+      <img width="256" height="86" alt="GA-logo" src="https://github.com/user-attachments/assets/0284af1b-bf15-408c-b724-98868f976667" />
+ <!-- </img> -->
   </a>
 </p>
 
