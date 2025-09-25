@@ -220,13 +220,17 @@ Logged out
 - Enhanced CLI styling (colors, ASCII art banners)
 - Forgot password & reset flow
 
-## Technologies Used        (#fix)
+##  Technologies Used  
 
-- 🐍 Python 3.10+
-- 📑 CSV for data persistence
-- 🖥️ CLI (menu-driven interaction)
-- 🛠️ Visual Studio Code
-- 🌐 GitHub for version control
+<p align="center">
+  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" width="40" alt="Python"/>
+  <img src="https://img.icons8.com/?size=48&id=13423&format=png" width="40" alt="CSV"/>
+  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/visual_studio_code.png" width="40" alt="VS Code"/>
+  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" width="40" alt="GitHub"/>
+</p>
+
+
+
 
 ## 🎓 Education & Training      (#fix)
 
