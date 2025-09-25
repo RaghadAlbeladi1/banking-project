@@ -2,8 +2,9 @@
 <p align="center"><i>A simple yet fun Banking System built with Python & CSV</i></p>  
 
 <p align="center">
-Welcome to <b>Raghad Bank</b> — a CLI-based banking app where you can open accounts, deposit, withdraw, and transfer money with overdraft protection & reactivation rules.
-</p>  
+  Welcome to <b>Raghad Bank</b> — a simple banking system built in Python that runs in the terminal. It allows users to create accounts, log in with ID and password, deposit, withdraw, and transfer money, handle overdrafts and inactive accounts, and save/load data from a CSV file. The project demonstrates <b>Object-Oriented Programming (OOP)</b>, <b>file handling</b>, and <b>CLI-based interaction</b>.
+</p>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python"/>
