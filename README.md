@@ -17,8 +17,6 @@
   <img src="https://img.shields.io/badge/Editor-VS%20Code-blue?logo=visualstudiocode"/>
 </p>  
 
-## Education & Training  
-
 This project was developed as part of my learning journey with:
 
 <p align="center">
