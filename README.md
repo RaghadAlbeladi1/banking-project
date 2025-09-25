@@ -1,5 +1,5 @@
-# 🏦💸 Raghad Bank 💸🏦  
-*A simple yet fun Banking System built with Python & CSV*  
+<h1 align="center">🏦💸 Raghad Bank 💸🏦</h1>  
+<p align="center"><i>A simple yet fun Banking System built with Python & CSV</i></p> 
 
 Welcome to **Raghad Bank** — a CLI-based banking app where you can open accounts, deposit, withdraw, and transfer money with overdraft protection & reactivation rules.  
 
@@ -220,32 +220,18 @@ Logged out
 - Enhanced CLI styling (colors, ASCII art banners)
 - Forgot password & reset flow
 
-##  Technologies Used  
+## 🛠️ Technologies Used  
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" width="40" alt="Python"/>
-  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/visual_studio_code.png" width="40" alt="VS Code"/>
-  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" width="40" alt="GitHub"/>
+<p align="center" style="display: flex; justify-content: space-between;">
+  <img src="https://raw.githubusercontent.com/RaghadAlbeladi1/banking-project/main/python_csv.png" width="60" alt="Python + CSV"/>
+  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" width="60" alt="Python"/>
+  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/visual_studio_code.png" width="60" alt="VS Code"/>
+  <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" width="60" alt="GitHub"/>
 </p>
-
-
 
 
 ## 🎓 Education & Training      (#fix)
 
-This project was developed as part of my learning journey with:
-
-<div align="center">
-
-**General Assembly**  
-<img src="https://www.clipartmax.com/png/small/354-3547041_download-general-assembly-clipart-logo-brand-trademark-general-assembly-logo-black.png" alt="General Assembly Logo" width="200"/>
-
-**Saudi Digital Academy**  
-<img src="https://sda.edu.sa/assets/images/logo.png" alt="Saudi Digital Academy Logo" width="200"/>
-
-*Empowering the next generation of digital talent* 🚀
-
-</div>
 
 ## System Requirements
 
