@@ -1,10 +1,17 @@
 <h1 align="center">🏦💸 Raghad Bank 💸🏦</h1>  
-<p align="center"><i>A simple yet fun Banking System built with Python & CSV</i></p> 
+<p align="center"><i>A simple yet fun Banking System built with Python & CSV</i></p>  
 
-Welcome to **Raghad Bank** — a CLI-based banking app where you can open accounts, deposit, withdraw, and transfer money with overdraft protection & reactivation rules.  
+<p align="center">
+Welcome to <b>Raghad Bank</b> — a CLI-based banking app where you can open accounts, deposit, withdraw, and transfer money with overdraft protection & reactivation rules.
+</p>  
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python) ![CSV](https://img.shields.io/badge/Data-CSV-lightgrey?logo=files) ![Interface](https://img.shields.io/badge/Interface-CLI-green?logo=windowsterminal) ![GitHub](https://img.shields.io/badge/Hosted_on-GitHub-black?logo=github) ![VS Code](https://img.shields.io/badge/Editor-VS%20Code-blue?logo=visualstudiocode)  
-
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python"/>
+  <img src="https://img.shields.io/badge/Data-CSV-lightgrey?logo=files"/>
+  <img src="https://img.shields.io/badge/Interface-CLI-green?logo=windowsterminal"/>
+  <img src="https://img.shields.io/badge/Hosted_on-GitHub-black?logo=github"/>
+  <img src="https://img.shields.io/badge/Editor-VS%20Code-blue?logo=visualstudiocode"/>
+</p>  
 ---
 
 ## Project Structure
