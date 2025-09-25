@@ -6,7 +6,20 @@
   It lets users <b>create accounts</b>, <b>log in</b>, <b>deposit</b>, <b>withdraw</b>, and <b>transfer money</b>, while also handling <b>overdrafts</b> and <b>inactive accounts</b>.  
   Data is stored in a <b>CSV file</b>, and the project demonstrates key concepts like <b>Object-Oriented Programming (OOP)</b>, <b>file handling</b>, and <b>CLI-based interaction</b>.
 </p>
+ 
+<p align="center"> This project was developed as part of my learning journey with:</p>
 
+<p align="center">
+  <a href="https://generalassemb.ly/">
+    <img src="https://github.com/user-attachments/assets/0284af1b-bf15-408c-b724-98868f976667" alt="General Assembly" height="80"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://sda.edu.sa/">
+  </a><img width="500" height="80" alt="Sda-logo-color" src="https://github.com/user-attachments/assets/5edb2838-4fe6-4b18-b80d-706b31f56a64" />
+
+</p>
+
+<p align="center"><i>✨ Empowering the next generation of digital talent ✨</i></p>
 
 
 <p align="center">
@@ -15,23 +28,8 @@
   <img src="https://img.shields.io/badge/Interface-CLI-green?logo=windowsterminal"/>
   <img src="https://img.shields.io/badge/Hosted_on-GitHub-black?logo=github"/>
   <img src="https://img.shields.io/badge/Editor-VS%20Code-blue?logo=visualstudiocode"/>
-</p>  
-This project was developed as part of my learning journey with:
+</p> 
 
-<p align="center">
-  <a href="https://generalassemb.ly/">
-    <img src="https://github.com/user-attachments/assets/0284af1b-bf15-408c-b724-98868f976667" alt="General Assembly" height="80"/>
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://sda.edu.sa/">
-    <img src="https://github.com/user-attachments/assets/a7046bf7-a2a0-449a-af65-7fc96da0f893" alt="Saudi Digital Academy" height="80"/>
-  </a>
-</p>
-
-<p align="center"><i>✨ Empowering the next generation of digital talent ✨</i></p>
-
-
----
 
 <h2 align="left"> Project Structure</h2>
 <p align="left">
