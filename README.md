@@ -7,6 +7,6 @@ Welcome to **Raghad Bank** — a CLI-based banking app where you can open accoun
 
 ---
 ##  Project Structure
-- bank.csv      # Data file (auto-created on first run)  
-- banking.py    # Main application code  
-- README.md     # Project documentation 
+- bank.csv      -> Data file (auto-created on first run)  
+- banking.py    -> Main application code  
+- README.md     -> Project documentation 
