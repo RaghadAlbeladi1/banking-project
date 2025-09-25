@@ -16,21 +16,15 @@
   <img src="https://img.shields.io/badge/Hosted_on-GitHub-black?logo=github"/>
   <img src="https://img.shields.io/badge/Editor-VS%20Code-blue?logo=visualstudiocode"/>
 </p>  
-
 This project was developed as part of my learning journey with:
 
 <p align="center">
-
   <a href="https://generalassemb.ly/">
-    <img width="256" height="86" alt="GA-logo" src="https://github.com/user-attachments/assets/0284af1b-bf15-408c-b724-98868f976667" />
+    <img src="https://github.com/user-attachments/assets/0284af1b-bf15-408c-b724-98868f976667" alt="General Assembly" height="80"/>
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://sda.edu.sa/">
-    <!-- <img src="" alt="Saudi Digital Academy" height="80" -->
-     
-![SDA](https://github.com/user-attachments/assets/a7046bf7-a2a0-449a-af65-7fc96da0f893)
-
- <!-- </img> -->
+    <img src="https://github.com/user-attachments/assets/a7046bf7-a2a0-449a-af65-7fc96da0f893" alt="Saudi Digital Academy" height="80"/>
   </a>
 </p>
 
